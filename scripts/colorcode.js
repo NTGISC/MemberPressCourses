@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!block.querySelector('code')) {
       var code = document.createElement('code');
       code.className = 'language-python';
-      var html = block.innerHTML;
-      html = html.replace(/<br\s*\/?>/gi, '\n');
-      var text = html.replace(/<[^>]+>/g, '');
-      code.textContent = text;
+      var html = block.innerHTML.replace(/<br\s*\/?>/gi, '\n');
+			var temp = document.createElement('div');
+			temp.innerHTML = html;
+			var text = temp.textContent;
+			code.textContent = text;
       block.innerHTML = '';
       block.appendChild(code);
     }
