@@ -1,7 +1,3 @@
-<!-- Prism.js Core and Python Language support -->
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
-<script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('pre.wp-block-preformatted').forEach(function(block, i) {
     block.classList.add('language-python');
@@ -22,4 +18,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   Prism.highlightAll();
 });
-</script>
