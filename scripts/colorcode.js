@@ -1,20 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Handle wp-block-preformatted (may not have <code>)
   document.querySelectorAll('pre.wp-block-preformatted').forEach(function(block, i) {
-    block.classList.add('language-python');
-    // If not already wrapped, wrap content in a <code> tag
     if (!block.querySelector('code')) {
       var code = document.createElement('code');
       code.className = 'language-python';
-      // Convert <br> to \n if necessary
       var html = block.innerHTML;
       html = html.replace(/<br\s*\/?>/gi, '\n');
-      // Remove any HTML tags (if any remain)
       var text = html.replace(/<[^>]+>/g, '');
-      // Now insert as plain text
       code.textContent = text;
       block.innerHTML = '';
       block.appendChild(code);
     }
   });
+
+  // Handle wp-block-code (already has <code>)
+  document.querySelectorAll('pre.wp-block-code > code').forEach(function(code, i) {
+    code.classList.add('language-python');
+  });
+
   Prism.highlightAll();
 });
