@@ -1,5 +1,3 @@
-<!-- Prism.js CSS (choose a theme from https://prismjs.com/) -->
-<link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
 <!-- Prism.js Core and Python Language support -->
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
