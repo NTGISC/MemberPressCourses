@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('pre.wp-block-preformatted').forEach(function(block, i) {
     if (!block.querySelector('code')) {
       var code = document.createElement('code');
-      code.className = 'language-arccade';
+      code.className = 'language-arcade';
       var html = block.innerHTML.replace(/<br\s*\/?>/gi, '\n');
 			var temp = document.createElement('div');
 			temp.innerHTML = html;
